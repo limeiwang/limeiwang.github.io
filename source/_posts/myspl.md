@@ -33,3 +33,7 @@ alias mysqladmin=/usr/local/mysql/bin/mysqladmin
 - 就可以在终端使用mysql 啦：command : mysql -u root -p 然后就输入在安装的时候设置的密码就可以了
 
 - quit
+
+# 扩展
+
+数据库管理系统: [sequelpro](http://www.sequelpro.com/)
