@@ -1,5 +1,5 @@
 ---
-title: myspl
+title: mysql
 date: 2021-02-08 21:01:35
 tags:
 ---
