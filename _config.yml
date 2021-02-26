@@ -104,5 +104,5 @@ theme: cactus
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/lmw0221/lmw0221.github.io
+  repo: https://github.com/limeiwang/limeiwang.github.io
   branch: master

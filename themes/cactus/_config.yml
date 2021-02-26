@@ -17,7 +17,7 @@ nav:
   home: /
   about: /about/
   articles: /archives/
-  projects: https://github.com/lmw0221
+  projects: https://github.com/limeiwang
 
 
 # Links to your social media accounts.
@@ -25,7 +25,7 @@ nav:
 # (see https://fontawesome.com/icons?d=gallery&s=brands);
 # only 'mail' is an exception.
 social_links:
-  github: https://github.com/lmw0221
+  github: https://github.com/limeiwang
   twitter: /
   facebook: /
   linkedin: /
