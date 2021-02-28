@@ -50,6 +50,14 @@ vim怎么使用？
 作者推荐：[菜鸟](https://www.runoob.com/linux/linux-vim.html) [vim中文社区](http://vim-china.org/)
 
 
+## oh my zsh
+oh my zsh是什么？
+zsh的功能极其强大，只是配置过于复杂，起初只有极客才在用。后来，一些极客为了让更多人受益，开发了Oh-my-zsh这个插件，用来简化zsh的配置，让zsh更加容易上手。
+
+oh my zsh怎么安装？
+作者推荐: [Linux/Mac如何配置zsh并使用Oh-my-zsh？让你的终端更加好用 ](https://www.mintimate.cn/2021/02/05/configZsh/)
+
+
 ## Homebrew
 Homebrew是什么？
 引用[官方](https://brew.sh/)的一句话：Homebrew是Mac OS 不可或缺的套件管理器。
@@ -58,5 +66,11 @@ Homebrew是一款Mac OS平台下的软件包管理工具，拥有安装、卸载
 
 brew怎么安装使用？
 作者推荐: [Mac必备神器Homebrew](https://zhuanlan.zhihu.com/p/59805070)
+
+
+## markdown
+Markdown是什么？
+Markdown是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。
+
 
 
