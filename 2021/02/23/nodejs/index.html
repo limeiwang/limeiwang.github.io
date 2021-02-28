@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="nodejs Node.js 是一个基于 Chrome V8 引擎的 Javascript 运行环境  工具包nvmnvm是什么？nvm（Node Version Manager）是node版本管理器。 nvm可以做些什么？  nvm是命令行安装有专业范，更加方便。 nvm上可以列出所有的nodejs版本。 nvm可以安装多个版本并可以在多个版本中来回切换。  nvm安装使用： 123456789">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nodejs">
+<meta property="og:url" content="http://example.com/2021/02/23/nodejs/index.html">
+<meta property="og:site_name" content="Limw">
+<meta property="og:description" content="nodejs Node.js 是一个基于 Chrome V8 引擎的 Javascript 运行环境  工具包nvmnvm是什么？nvm（Node Version Manager）是node版本管理器。 nvm可以做些什么？  nvm是命令行安装有专业范，更加方便。 nvm上可以列出所有的nodejs版本。 nvm可以安装多个版本并可以在多个版本中来回切换。  nvm安装使用： 123456789">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-02-23T02:14:53.000Z">
+<meta property="article:modified_time" content="2021-02-27T17:19:35.391Z">
+<meta property="article:author" content="Limw">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>nodejs</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://github.com/limeiwang">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2021/02/26/developer/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2021/02/08/mysql/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2021/02/23/nodejs/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2021/02/23/nodejs/&text=nodejs"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2021/02/23/nodejs/&title=nodejs"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2021/02/23/nodejs/&is_video=false&description=nodejs"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=nodejs&body=Check out this article: http://example.com/2021/02/23/nodejs/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2021/02/23/nodejs/&title=nodejs"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2021/02/23/nodejs/&title=nodejs"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2021/02/23/nodejs/&title=nodejs"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2021/02/23/nodejs/&title=nodejs"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2021/02/23/nodejs/&name=nodejs&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2021/02/23/nodejs/&t=nodejs"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#nodejs"><span class="toc-number">1.</span> <span class="toc-text">nodejs</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7%E5%8C%85"><span class="toc-number">2.</span> <span class="toc-text">工具包</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#nvm"><span class="toc-number">2.1.</span> <span class="toc-text">nvm</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#npm"><span class="toc-number">2.2.</span> <span class="toc-text">npm</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#nodemon"><span class="toc-number">2.3.</span> <span class="toc-text">nodemon</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sequelize"><span class="toc-number">2.4.</span> <span class="toc-text">sequelize</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bcryptjs"><span class="toc-number">2.5.</span> <span class="toc-text">bcryptjs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jsonwebtoken-jwt"><span class="toc-number">2.6.</span> <span class="toc-text">jsonwebtoken(jwt)</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        nodejs
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Limw</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2021-02-23T02:14:53.000Z" itemprop="datePublished">2021-02-23</time>
+        
+      
+    </div>
+
+
+      
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="nodejs"><a href="#nodejs" class="headerlink" title="nodejs"></a>nodejs</h1><blockquote>
+<p>Node.js 是一个基于 Chrome V8 引擎的 Javascript 运行环境</p>
+</blockquote>
+<h1 id="工具包"><a href="#工具包" class="headerlink" title="工具包"></a>工具包</h1><h2 id="nvm"><a href="#nvm" class="headerlink" title="nvm"></a>nvm</h2><p>nvm是什么？<br>nvm（Node Version Manager）是node版本管理器。</p>
+<p>nvm可以做些什么？</p>
+<ol>
+<li>nvm是命令行安装有专业范，更加方便。</li>
+<li>nvm上可以列出所有的nodejs版本。</li>
+<li>nvm可以安装多个版本并可以在多个版本中来回切换。</li>
+</ol>
+<p><strong>nvm安装使用：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">curl -o- https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;creationix&#x2F;nvm&#x2F;v0.33.8&#x2F;install.sh | bash</span><br><span class="line"></span><br><span class="line">nvm --version &#x2F;&#x2F; 查看版本号</span><br><span class="line"></span><br><span class="line">nvm ls-remote &#x2F;&#x2F; 列出所有node版本</span><br><span class="line"></span><br><span class="line">nvm install v12.6.0 &#x2F;&#x2F; 安装node版本</span><br><span class="line"></span><br><span class="line">node --version &#x2F;&#x2F; 查看nodejs版本号</span><br><span class="line"></span><br><span class="line">nvm ls &#x2F;&#x2F; 查看nvm上安装的所以node版本</span><br><span class="line"></span><br><span class="line">nvm alias default v12.6.0 &#x2F;&#x2F; 切换版本</span><br><span class="line">nvm use v12.6.0 &#x2F;&#x2F; 切换版本</span><br></pre></td></tr></table></figure>
+
+<h2 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h2><p>npm是什么？<br>npm是随同nodejs一起下载的包管理工具，世界上最大的可复用代码的仓库。</p>
+<p>npm解决了什么问题：</p>
+<ol>
+<li>npm是避免开发者重复造轮子，让大家的劳动成果可以共享。</li>
+<li>npm包安装以后会将包名和版本号记录在package.json之中。</li>
+<li>npm实际下载的包文件会存放在根目录的mode-modules之中。</li>
+<li>可以使用<code>require(&#39;包名&#39;)</code>引入它。</li>
+</ol>
+<h2 id="nodemon"><a href="#nodemon" class="headerlink" title="nodemon"></a>nodemon</h2><p>nodemon是什么？<br>nodemon是一种工具，可以自动检测到目录中的文件更改时通过重新启动应用程序来调试基于node.js的应用程序。</p>
+<p><strong>安装</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install -g nodemon</span><br><span class="line">&#x2F;&#x2F;或</span><br><span class="line">npm install --save-dev nodemon</span><br></pre></td></tr></table></figure>
+<p><strong>使用</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">nodemon   .&#x2F;main.js &#x2F;&#x2F; 启动node服务</span><br><span class="line"></span><br><span class="line">nodemon .&#x2F;main.js localhost 6677 &#x2F;&#x2F; 在本地6677端口启动node服务</span><br><span class="line"></span><br><span class="line">&quot;start&quot;: &quot;ts-node -r tsconfig-paths&#x2F;register nodemon src&#x2F;main.ts&quot;,</span><br></pre></td></tr></table></figure>
+<p><strong>延时启用</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">nodemon -delay10 main.js</span><br><span class="line"></span><br><span class="line">nodemon --delay 2.5 server.js</span><br><span class="line"></span><br><span class="line">nodemon --delay 2500ms server.js</span><br></pre></td></tr></table></figure>
+<h2 id="sequelize"><a href="#sequelize" class="headerlink" title="sequelize"></a>sequelize</h2><p>使用sequelize的好处是不需要再使用sql语句，查数据库的操作和操作对象是相似的，把数据库映射成对象，对对象进行操作</p>
+<p><strong>安装</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save sequelize</span><br></pre></td></tr></table></figure>
+<h2 id="bcryptjs"><a href="#bcryptjs" class="headerlink" title="bcryptjs"></a>bcryptjs</h2><p>bcryptjs是nodejs中比较好的一款加盐(salt)加密的包.</p>
+<p><strong>安装</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install bcryptjs</span><br></pre></td></tr></table></figure>
+<h2 id="jsonwebtoken-jwt"><a href="#jsonwebtoken-jwt" class="headerlink" title="jsonwebtoken(jwt)"></a>jsonwebtoken(jwt)</h2><p>JSON Web Token 是一个开放标准协议，它定义了一种紧凑和自包含的方式，它用于各方之间作为JSON对象安全地传输信息。</p>
+<p>// TODO</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://github.com/limeiwang">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#nodejs"><span class="toc-number">1.</span> <span class="toc-text">nodejs</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7%E5%8C%85"><span class="toc-number">2.</span> <span class="toc-text">工具包</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#nvm"><span class="toc-number">2.1.</span> <span class="toc-text">nvm</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#npm"><span class="toc-number">2.2.</span> <span class="toc-text">npm</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#nodemon"><span class="toc-number">2.3.</span> <span class="toc-text">nodemon</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sequelize"><span class="toc-number">2.4.</span> <span class="toc-text">sequelize</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bcryptjs"><span class="toc-number">2.5.</span> <span class="toc-text">bcryptjs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jsonwebtoken-jwt"><span class="toc-number">2.6.</span> <span class="toc-text">jsonwebtoken(jwt)</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2021/02/23/nodejs/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2021/02/23/nodejs/&text=nodejs"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2021/02/23/nodejs/&title=nodejs"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2021/02/23/nodejs/&is_video=false&description=nodejs"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=nodejs&body=Check out this article: http://example.com/2021/02/23/nodejs/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2021/02/23/nodejs/&title=nodejs"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2021/02/23/nodejs/&title=nodejs"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2021/02/23/nodejs/&title=nodejs"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2021/02/23/nodejs/&title=nodejs"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2021/02/23/nodejs/&name=nodejs&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2021/02/23/nodejs/&t=nodejs"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2021
+    Limw
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://github.com/limeiwang">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
